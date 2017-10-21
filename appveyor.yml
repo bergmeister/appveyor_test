@@ -2,4 +2,7 @@ image: Visual Studio 2017
 
 build_script:
   - ps: $PSVersionTable; dotnet --version
-  - ps: Get-ChildItem; Get-History
+  - ps: |
+          $tempfile = [System.IO.Path]::GetTempFileName()
+          Save-History $tempfile
+          Get-Content $tempfile -Raw
