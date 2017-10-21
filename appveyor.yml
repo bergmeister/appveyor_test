@@ -3,6 +3,7 @@ image: Visual Studio 2017
 build_script:
   - ps: $PSVersionTable; dotnet --version
   - ps: |
+         bash -c whoami
           Function Save-History($fileNameOrPath)
           {
             if ([string]::IsNullOrEmpty($fileNameOrPath))
