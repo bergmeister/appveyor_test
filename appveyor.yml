@@ -2,5 +2,4 @@ image: Visual Studio 2017
 
 install:
   - ps: $PSVersionTable; dotnet --version
-  - ps: |
-        Get-ChildItem; Get-History
+  - ps: Get-ChildItem; Get-History
