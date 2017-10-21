@@ -16,3 +16,4 @@ build_script:
           $history = Get-Content $tempfile -Raw
           Write-Host $history
           Write-Host "-- $((Get-History).CommandLine)"
+          Write-Host "++ $(Get-History)"
