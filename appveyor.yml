@@ -3,6 +3,14 @@ image: Visual Studio 2017
 build_script:
   - ps: $PSVersionTable; dotnet --version
   - ps: |
+          Function Save-History($fileNameOrPath)
+          {
+            if ([string]::IsNullOrEmpty($fileNameOrPath))
+            {
+              $fileNameOrPath = "$(Get-Date -f yyyy-MM-dd_HH-mm-ss).PowerShellHistory"
+            }
+            (Get-History).CommandLine | Out-File $fileNameOrPath
+          }
           $tempfile = [System.IO.Path]::GetTempFileName()
           Save-History $tempfile
           Get-Content $tempfile -Raw
