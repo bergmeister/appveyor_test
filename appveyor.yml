@@ -1,5 +1,5 @@
 image: Visual Studio 2017
 
-install:
+build_script:
   - ps: $PSVersionTable; dotnet --version
   - ps: Get-ChildItem; Get-History
