@@ -13,4 +13,5 @@ build_script:
           }
           $tempfile = [System.IO.Path]::GetTempFileName()
           Save-History $tempfile
-          Get-Content $tempfile -Raw
+          $history = Get-Content $tempfile -Raw
+          Write-Host $history
