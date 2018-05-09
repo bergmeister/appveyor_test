@@ -1,5 +1,5 @@
 image: Ubuntu
 
 build_script:
-  - sh: curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin
+  - sh: curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin --version 2.1.200
   - ps: $PSVersionTable; dotnet --version
