@@ -1,20 +1,4 @@
-image: Visual Studio 2017
+image: Ubuntu
 
 build_script:
   - ps: $PSVersionTable; dotnet --version
-  - ps: |
-         bash -c whoami
-          Function Save-History($fileNameOrPath)
-          {
-            if ([string]::IsNullOrEmpty($fileNameOrPath))
-            {
-              $fileNameOrPath = "$(Get-Date -f yyyy-MM-dd_HH-mm-ss).PowerShellHistory"
-            }
-            (Get-History).CommandLine | Out-File $fileNameOrPath
-          }
-          $tempfile = [System.IO.Path]::GetTempFileName()
-          Save-History $tempfile
-          $history = Get-Content $tempfile -Raw
-          Write-Host $history
-          Write-Host "-- $((Get-History).CommandLine)"
-          Write-Host "++ $(Get-History)"
