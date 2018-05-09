@@ -1,6 +1,5 @@
 image: Ubuntu
 
 build_script:
-  - sh: curl -sSL https://dot.net/v1/dotnet-install.sh | source /dev/stdin --version 2.1.200; dotnet --version
-  - sh: export  PATH=/home/appveyor/.dotnet:$PATH
-  - ps: $PSVersionTable; dotnet --version
+  - sh: curl -sSL https://dot.net/v1/dotnet-install.sh | source /dev/stdin --version 2.1.200; [Environment]::SetEnvironmentVariable("PATH", "/home/appveyor/.dotnet:$env:PATH")
+  - ps: $PSVersionTable; dotnet --version; which dotnet
