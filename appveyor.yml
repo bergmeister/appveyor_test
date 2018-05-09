@@ -1,5 +1,5 @@
 image: Ubuntu
 
 build_script:
-  - ps: $dotNetCoreSDKVersion = 2.1.200; Invoke-WebRequest 'https://dot.net/v1/dotnet-install.sh' -OutFile dotnet-install.sh;  $installDir =  $env:PATH.Split([System.IO.Path]::PathSeparator) | Select-Object -Last 1; Write-Verbose "inst $installDir" -Verbose; $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetsdk"; source dotnet-install.sh --version "$dotNetCoreSDKVersion"; $env:Path = "$env:DOTNET_INSTALL_DIR;$env:Path"
+  - ps: $dotNetCoreSDKVersion = 2.1.200; Invoke-WebRequest 'https://dot.net/v1/dotnet-install.sh' -OutFile dotnet-install.sh;  $installDir =  $env:PATH.Split([System.IO.Path]::PathSeparator) | Select-Object -Last 1; Write-Verbose "inst $installDir" -Verbose; $env:DOTNET_INSTALL_DIR = "$pwd\.dotnetsdk"; bash ./dotnet-install.sh --version "$dotNetCoreSDKVersion"; $env:Path = "$env:DOTNET_INSTALL_DIR;$env:Path"
   - ps: $PSVersionTable; dotnet --version
