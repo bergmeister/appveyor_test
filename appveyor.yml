@@ -2,4 +2,4 @@ image: Ubuntu
 
 build_script:
   - pwsh: $PSVersionTable; dotnet --version
-  - pwsh: pwsh -command '"Hello World"'
+  - pwsh: pwsh -command '$PSVersionTable'
