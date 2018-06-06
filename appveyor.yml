@@ -1,4 +1,7 @@
-image: Ubuntu
+environment:
+  matrix:
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+  - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
 
 build_script:
   - pwsh: $PSVersionTable; dotnet --version
