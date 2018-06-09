@@ -1,7 +1,9 @@
 environment:
   matrix:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
   - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
 
 build_script:
   - pwsh: $PSVersionTable; dotnet --version
+  - ps: Write-Host -Foreground Green "APPVEYOR_REPO_COMMIT_MESSAGE is '$env:APPVEYOR_REPO_COMMIT_MESSAGE'"
