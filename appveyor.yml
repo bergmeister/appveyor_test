@@ -5,5 +5,4 @@ environment:
   - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
 
 build_script:
-  - pwsh: $PSVersionTable; dotnet --version
-  - ps: Write-Host -Foreground Green "APPVEYOR_REPO_COMMIT_MESSAGE is '$env:APPVEYOR_REPO_COMMIT_MESSAGE'"
+  - ps: Install-Module -Name Pester -Force -SkipPublisherCheck -Scope CurrentUser
