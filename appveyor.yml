@@ -1,8 +1,6 @@
 environment:
   matrix:
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-  - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
   - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
 
 build_script:
-  - ps: Install-Module -Name Pester -Force -SkipPublisherCheck -Scope CurrentUser
+  - ps: dotnet --version
