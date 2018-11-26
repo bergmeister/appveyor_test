@@ -4,4 +4,4 @@ environment:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
 build_script:
-  - ps: dotnet --version
+  - ps: dotnet --version; where.exe dotnet
