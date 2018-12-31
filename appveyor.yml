@@ -4,4 +4,4 @@ environment:
   - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
 
 build_script:
-  - sh: echo $LANG
+  - pwsh: $env:LANG
