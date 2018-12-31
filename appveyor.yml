@@ -1,4 +1,7 @@
-image: Ubuntu
+environment:
+  LANG: en-us.UTF-8
+  matrix:
+  - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
 
 build_script:
   - sh: echo $LANG
