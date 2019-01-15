@@ -4,4 +4,4 @@ environment:
   - APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
 
 build_script:
-  - pwsh: $env:LANG
+  - pwsh: pwsh -command '$PSversionTable'
