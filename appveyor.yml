@@ -6,4 +6,4 @@ environment:
   - APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
 
 build_script:
-  - pwsh: $PSVersionTable
+  - pwsh: $PSVersionTable 
